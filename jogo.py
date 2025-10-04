@@ -54,7 +54,7 @@ class Menu:
     def start_game(self):
         print("Iniciando jogo da forca...")
         self.running = False
-        main_forca()  # Chama o jogo da forca no terminal
+        Jogo.forca_principal()  # Chama o jogo da forca no terminal
 
     def exit_game(self):
         pygame.quit()
@@ -152,11 +152,51 @@ class Jogo:
         self.escrita_erradas = []
         self.escrita_certas = []
 
-    def adivinhar(self, palavra):
-        if palavra in self.linguagem and palavra not in self.escrita_certas:
-            self.escrita_certas.append(palavra)
-        elif palavra not in self.linguagem and palavra not in self.escrita_erradas:
-            self.escrita_erradas.append(palavra)
+    def adivinhar(self, letra):
+        if letra in self.linguagem and letra not in self.escrita_certas:
+            self.escrita_certas.append(letra)
+        elif letra not in self.linguagem and letra not in self.escrita_erradas:
+            self.escrita_erradas.append(letra)
         else:
             return False
         return True
+
+    def forca_acima(self):
+        return self.forca_vencida() or (len(self.escrita_erradas) == 6)
+
+    def forca_vencida(self):
+        return '_' not in self.ocultar_palavra()
+
+    def ocultar_palavra(self):
+        return ''.join([i if i in self.escrita_certas else '_' for i in self.linguagem])
+
+    def imprimir_status_do_jogo(self):
+        print(base[len(self.escrita_erradas)])
+        print('\nPalavra: ' + self.ocultar_palavra())
+        print('\nLetras erradas: ', ' '.join(self.escrita_erradas))
+        print('Letras corretas: ', ' '.join(self.escrita_certas))
+        print()
+
+    @staticmethod
+    def palavra_aleatoria():
+        with open("Palavras.txt", "rt", encoding="utf-8") as f:
+            banco = [linha.strip() for linha in f if linha.strip()]
+        return random.choice(banco)
+
+    @staticmethod
+    def forca_principal():
+        game = Jogo(Jogo.palavra_aleatoria())
+        while not game.forca_acima():
+            game.imprimir_status_do_jogo()
+            entrada_usuario = input('\nDigite uma letra: ').strip().lower()
+            game.adivinhar(entrada_usuario)
+        game.imprimir_status_do_jogo()
+        if game.forca_vencida():
+            print('\nParabéns! Você venceu :)')
+        else:
+            print('Fim de jogo! Você perdeu :(')
+            print('A palavra era: ' + game.linguagem)
+
+# ----------------- Execução -----------------
+if __name__ == "__main__":
+    Game().run()
