@@ -1,5 +1,16 @@
+lapis
+mesa
+computador 
+livro
+sol
+lua
 melancia
 abacate
 melao
 abacaxi
 goiaba
+uva
+cachorro 
+gato
+tigre
+leao
