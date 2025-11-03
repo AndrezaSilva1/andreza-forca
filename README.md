@@ -1,79 +1,80 @@
-Projeto: Jogo Forca
-Tecnologia: python 3 Descrição : Interação do jogo da forca com interação no terminal. O jogo permite que usuário adicionar palavras completas com interação, controla letras ja tentadas, gerenciamento de forca eficiente, e conforme erros desenhar a forca
+Jogo da Forca
+Data 01/11/2025
+Descrição do projeto:
+Este projeto é implementação desenvolvida com jogo python, utilizando a biclioteca pygame para criar uma interface grafica com usuario.
 
-Objetivo : Criar um jogo desenvolvido que trabalher com a programação, possibilitando uma interação.
+O jogo começa com menu principal, onde o jogador pode:
+-Inicar o jogo
+-Sair do jogo
 
-Principais e Mecânicas
-O jogador deve digitar três palavras ou terminar com “s”
+No jogo, o jogador tem que adivinhar uma palavra escolhida aleatoriamente de um arquivo externo(Palavras.txt) digitando as letras no teclado e depois dando enter.
+A cada erro, uma parte do boneco da forca e desenhado. O jogo finaliza quando:
+- O jogador acertas todas as letras (vitoria)ou
+- Quando o jodagor erra (derrota)
 
-O jogador acrescentar palavras a lista
+Estrutura do Projeto
+JogoDaForca/
+│
+├── JogoForca.py    #codigo principal do jogo e interface gráfica       
+├── Palavras.txt    #Palavras jogo        
+└── README.md       #Documentação do projeto
 
-Seção aletoria
-O sistema apos cada partida,casual seleciona a palavra
+Tecnologias usadas
+- python 3.10+
+- Pygame(bliblioteca para interface gráfica)
 
-O que garante a variedade na partida
+Conceitos de Programação Orientada a Objetos(POO)
+-Encapsulamento: Classes Button, Menu, Jogo de Game organizam funcionalidades especificas.
+-Abastração: Cada classe representa um conceito logico do jogo
+-Herança: A estrutura garantir facil expansão(ex:novos menu  ou modos de jogos)                                                            
+-Polimorfismo: Métodos que mudam o comportamento conforme o contexto(ex: callbacks dos botões).
 
-Representação da palavra ser adivinhada
+Pré-Riquisitos                                                                                                                             
+Antes de começa o jogo de e necessario ter:
+-Python instalado(versão 3.10 ou mais avancada)
+-Biblioteca Pygame
+Para baixar o pygame e só enserir esse comando no terminal:
+pip install pygame
 
-A palavra secreta e representada cada letra por _ , conforme o jogador acertar vai substituindo _ por letras.
+Como executar o jogo
+-Baixe ou clone o repositório:
+git clone https://github.com/AndrezaSilva1/andreza-forca/blob/main/jogo25102025.py
+-Acesse a pasta do projeto:
+cd JogoForca.py
+- Execute o jogo:
+python JogoForca.py
+- O menu será exibido com as opções:
+Iniciar o jogo: Começa o jogo
+Sair: Fecha o programa
 
-Gerenciamento das tentativas e letras ja usadas
+Arquivo de Palavras:
+O arquivo palavras.txt contém a lista de palavras que o jogo usa.
+Você pode adcionar, remover ou editar palavras.
+Exemplo:
+lapis  
+mesa  
+computador  
+livro  
+sol  
+lua  
+melancia  
+abacate  
+melao  
+abacaxi  
+goiaba  
+uva  
+cachorro  
+gato  
+tigre  
+leao
 
-O jogador tem oito tentativas erradas, representa por parte do desenho do jogo da forca
+Créditos:
+Desenvolvido : Andreza Pereira  
+Versão: 6ª Versão Final  
+Data: 01/11/2025  
+Linguagem: Python  
+Biblioteca: Pygame
 
-A cada erro, uma parte do boneco e desenhada na interface.
-
-Sistema Interação e Feedback
-A representação do jogo da forca, e desenhado aos tempo
-
-Lembrete para palavras já anexadas
-
-Terminal exibir nitidamente
-
-Mudanças do jogo e restantes de tentativas
-
-Vitória ou derrota
-O jogador ganha a vitoria quando os tracinhos acabam e a palavra e adivinhadas
-
-O jogador pedir quando o numero de oito tentativas e atingido, assim desenhando o jogo da forca
-
-Estrutura interna do código:
-
-Inicialização e entradas de dados - A
-Lista com palavras pré definidas, mais palavras adicionais
-
-Válida ser a palavra tem mais de quatro letras
-
-Permite o uso do “s” após três tentativas .
-
-Exibir a lista final de palavras
-
-Seleção aleatória - B
-randint da biblioteca random para escolher o índice da palavra correta
-
-Preparação de Máscaras e variáveis de controle - C
-criar uma lista tentativa_ para cada letra já tentada Inicializa variáveis: Forca para contar erros
-
-acertos para contar letras descobertas
-
-letrasTentadas para armazenar letras ja tentadas
-
-Loop principal do jogo- D
-limpa a tela Exibir o desenho da forca conforme as letras erradas
-
-Exibir a palavra mascarada, a quantidade de letras e forca
-
-Checar ser a vitória ou derrota apresenta mensagem apropriada
-
-Solicitar uma letra ao jogador, conferir ser a letra ja foi tentada
-
-Atualiza máscara e contadores conforme o erro ou acerto.
-
-Possíveis melhorias e expansão futura:
-Interface Grafica: Tkinter ou Pygame para melhora visualização visual
-
-Bancos de palavras: Carregamento das palavras a partir de arquivos externos para maior escolaridade.
-
-Sistema de dicas: Fornece pista, com categoria.
-
-Modo Multiplayer: Permite que um jogador defina a palavra e outro tente adivinhar Pontuação: Introduzir um sistema de pontos na tentativa de tempo.
+Licença
+Este projeto é de uso educacional e livre para estudos e melhorias.
+Sinta-se a vontade para aprimorar ou modificar meu jogo.
