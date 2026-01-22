@@ -1,10 +1,16 @@
 # Jogo da Forca
+
 ---
+
 ## Data
+
 - 01/11/2025
+  
 ---
+
 ## Descrição do projeto
 Este projeto é implementação desenvolvida com jogo python, utilizando a biclioteca pygame para criar uma interface grafica com usuario.
+
 O jogo começa com menu principal, onde o jogador pode:
 
 - Inicar o jogo
