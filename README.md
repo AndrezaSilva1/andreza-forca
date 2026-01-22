@@ -95,22 +95,22 @@ Você pode adcionar, remover ou editar palavras.
 
 ### Exemplo:
 
-lapis
-mesa
-computador
-livro
-sol
-lua
-melancia
-abacate
-melao
-abacaxi
-goiaba
-uva
-cachorro
-gato
-tigre
-leao
+- lapis
+- mesa
+- computador
+- livro
+- sol
+- lua
+- melancia
+- abacate
+- melao
+- abacaxi
+- goiaba
+- uva
+- cachorro
+- gato
+- tigre
+- leao
 
 
 ---
