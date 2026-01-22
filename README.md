@@ -1,17 +1,10 @@
 # Jogo da Forca
-
 ---
-
 ## Data
-
 - 01/11/2025
-
 ---
-
 ## Descrição do projeto
-
 Este projeto é implementação desenvolvida com jogo python, utilizando a biclioteca pygame para criar uma interface grafica com usuario.
-
 O jogo começa com menu principal, onde o jogador pode:
 
 - Inicar o jogo
@@ -28,11 +21,11 @@ A cada erro, uma parte do boneco da forca e desenhado. O jogo finaliza quando:
 
 ## Estrutura do Projeto
 
-JogoDaForca/
-│
-├── JogoForca.py #codigo principal do jogo e interface gráfica
-├── Palavras.txt #Palavras jogo
-└── README.md #Documentação do projeto
+- JogoDaForca/
+- │
+- ├── JogoForca.py #codigo principal do jogo e interface gráfica
+- ├── Palavras.txt #Palavras jogo
+- └── README.md #Documentação do projeto
 
 ---
 
@@ -52,7 +45,7 @@ JogoDaForca/
 
 ---
 
-## ⚙️ Pré-Riquisitos
+## Pré-Riquisitos
 
 Antes de começa o jogo de e necessario ter:
 
